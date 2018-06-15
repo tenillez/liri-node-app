@@ -5,12 +5,10 @@ var Spotify = require('node-spotify-api');
 var keys = require('./key.js');
 var request = require('request');
 var fs = require ('fs');
-//var client = new Twitter(keys.twitter);
+
 var spotify = new Spotify(keys.spotify);
 
 console.log("Type my-tweets, spotify-this-song, movie-this, or do-what-it-says to get started!");
-// spotify-this-song
-// do-what-it-says
 
 //Function for my tweets 
 var getMyTweets = function () {
@@ -120,7 +118,7 @@ var pick = function(caseData, functionData) {
         console.log("LIRI doesn't know that");
     }
   };
-  // Function which takes in command line arguments and executes correct function accordigly
+  // Function command line arguments and executes correct function 
   var runThis = function(argOne, argTwo) {
     pick(argOne, argTwo);
   };
